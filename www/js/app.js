@@ -19,13 +19,10 @@
           StatusBar.styleDefault();
         }
       });
-<<<<<<< HEAD
 
-        $ionicPlatform.registerBackButtonAction(function(e){
+      $ionicPlatform.registerBackButtonAction(function(e){
             console.log(e);
         }, 101);
-=======
->>>>>>> origin/master
     }).config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('app', {
@@ -60,8 +57,15 @@
                 }
               }
             })
-<<<<<<< HEAD
-
+            .state('app.cameraflash', {
+              url: "/cameraflash",
+              views: {
+                'menuContent': {
+                  templateUrl: "templates/camera/camera.html",
+                  controller: 'CameraCtrl'
+                }
+              }
+            })
             .state('app.weather', {
                 url: '/weather',
                 views: {
@@ -72,8 +76,6 @@
                 }
             })
 
-=======
->>>>>>> origin/master
             .state('app.single', {
               url: "/playlists/:playlistId",
               views: {
