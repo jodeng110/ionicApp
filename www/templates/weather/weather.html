@@ -4,10 +4,18 @@
             <label class="item-input-wrapper">
                 <input type="text" placeholder="지역을 입력하세요" ng-model="location">
             </label>
-            <button class="button button-small button-positive" ng-click="getWeather(location)">
+            <button class="button button-small button-positive" ng-click="getWeaterInfoByCityName(location)">
                 검색
            </button>
         </div>
-        <h1>{{humidity}}</h1>
+        <h2>City of {{cityName}}</h2>
+        <h3>{{humidity}}%</h3>
+
+        <button class="button button-small button-calm" ng-click="getWeatherInfo()">시간별 날씨 정보</button>
+        <ion-list>
+          <ion-item ng-repeat="item in weatherList">
+            {{item.dt_txt}} {{item.weather[0].main}} {{item.main.humidity}}%
+          </ion-item>
+        </ion-list>
     </ion-content>
 </ion-view>
