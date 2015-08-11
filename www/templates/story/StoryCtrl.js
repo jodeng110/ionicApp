@@ -1,13 +1,9 @@
 /**
  * Created by kimsuho on 15. 7. 25..
  */
-(function(starterControllers){
+(function(app){
     "use strict";
-<<<<<<< HEAD
-    starterControllers.controller('StoryCtrl', ['$scope', '$ionicPopup', '$timeout', '$window', 'Keyboard', 'Toast', function($scope, $ionicPopup, $timeout, $window, Keyboard, Toast){
-=======
-    starterControllers.controller('StoryCtrl', ['$scope', '$ionicPopup', '$timeout', '$window', 'Keyboard', function($scope, $ionicPopup, $timeout, $window, Keyboard){
->>>>>>> origin/master
+    app.controller('StoryCtrl', ['$scope', '$ionicPopup', '$timeout', '$window', 'Keyboard', 'Toast', function($scope, $ionicPopup, $timeout, $window, Keyboard, Toast){
         $scope.story = [
             {
                 profile : {
@@ -59,10 +55,6 @@
             s.content.like += s.content.isLike ? -1 : 1;
             s.content.isLike = !s.content.isLike;
         };
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
         $scope.isLike = function(index){
             return $scope.story[index].comments.isLike;
         };
@@ -97,11 +89,6 @@
             });
         };
         $scope.refresh = function(){
-<<<<<<< HEAD
-            Toast.show('dfeifeifiefj', 'long', '');
-        };
-
-=======
             $timeout(function(){
                 $scope.story.unshift({
                     profile : {
@@ -121,11 +108,10 @@
 
             $scope.$broadcast('scroll.refreshComplete');
         };
->>>>>>> origin/master
 
         $window.a = $window.a || {};
         $window.a.$scope = $scope;
     }]);
-}(starterControllers));
+}(app));
 
 
