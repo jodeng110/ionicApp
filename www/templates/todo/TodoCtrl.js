@@ -3,11 +3,7 @@
  */
 (function(app){
     "use strict";
-<<<<<<< HEAD
     app.controller('TodoCtrl', function($scope, Toast, $http){
-=======
-    app.controller('TodoCtrl', function($scope, Toast){
->>>>>>> origin/master
         $scope.people = [
             {name: 'suho',age: 31},
             {name: 'nayeon', age: 27},
@@ -24,22 +20,15 @@
         };
         $scope.hahaha = function(str){
             Toast.show(str);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
         };
 
         $scope.toast = function(msg){
             Toast.show(msg);
-<<<<<<< HEAD
             $http.get('http://api.openweathermap.org/data/2.5/weather?q=Seoul&APPID=8d554a626fc5d01d77812b612a6de257', {}).success(function(res){
                 console.log(res);
             }).error(function(err){
                 console.log(err);
             });
-=======
->>>>>>> origin/master
         };
     });
 }(app));
